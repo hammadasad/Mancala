@@ -1,9 +1,8 @@
-/**
- * Created by admin on 2016-03-13.
- */
-
 import java.util.ArrayList;
 
+/**
+ * 
+ */
 public class NodeGame {
     NodeGame parent;
     private Board board;
@@ -16,7 +15,6 @@ public class NodeGame {
 
     public NodeGame(Board passedBoard, Player player, Player opponent) {
         this(null, passedBoard, player, opponent, 0);
-
     }
 
     public NodeGame(NodeGame parent, Board passedBoard, Player player, Player opponent, int move) {
@@ -32,14 +30,6 @@ public class NodeGame {
     public int getNodeCount() {
         return nodeCount;
     }
-
-/*    public NodeGame(NodeGame parent, Board passedBoard, Player player) {
-        this.parent = parent;
-        board = new Board(passedBoard);
-        children = new ArrayList<>();
-        this.player = player.copy();
-        decisionChosen = moveChoice;
-    }*/
 
     public int getDecisionChosen() {
         return decisionChosen;
@@ -82,7 +72,6 @@ public class NodeGame {
                 childAdded.opponent.executeMove(move);
             }
         }
-
     }
 
     public int getisPlayer1Max() {
